@@ -1,0 +1,35 @@
+@import "primeicons/primeicons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pokefont';
+  src: url('assets/fonts/PocketMonk-15ze.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('assets/fonts/NotoSansNabataean-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+body {
+  @apply bg-purple-500
+}
+

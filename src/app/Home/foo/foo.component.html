@@ -1,0 +1,37 @@
+<p-card class="w-2/12 min-w-96 m-auto flex items-center self-align-center mt-96">
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-6xl mb-10 text-redDark-500 font-pokefont text-center">Welcome to PokeGame</h1>
+    <p-button
+      (onClick)="fetchPokemons()"
+      class="font-notosans "
+      label="Click here to load pokemons from 1st gen"
+      styleClass="border-red-800 bg-red-500 hover:bg-red-800 active:bg-red-500 text-center"
+    />
+    <p-select
+      [(ngModel)]="selectedPokemon"
+      [loading]="loading()"
+      [options]="pokemonsNames()"
+      [placeholder]=""
+      class="mt-4 w-6/12 md:w-56"
+      optionLabel="name"
+    >
+      <ng-template #selectedItem let-selectedPokemon>
+        @if (selectedPokemon) {
+          <div class="flex items-center gap-2">
+            <img
+              [src]="selectedPokemon.officialPokemonArt"
+              style="width: 36px"/>
+            <div>{{ selectedPokemon.name }}</div>
+          </div>
+        }
+      </ng-template>
+      <ng-template #item let-pokemon>
+        <div class="flex items-center gap-2">
+          <img [src]="pokemon.officialPokemonArt"
+               style="width: 36px"/>
+          <div>{{ pokemon.name }}</div>
+        </div>
+      </ng-template>
+    </p-select>
+  </div>
+</p-card>

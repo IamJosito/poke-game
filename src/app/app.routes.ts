@@ -1,4 +1,4 @@
 import { Routes } from '@angular/router';
-import { Foo } from './Home/foo/foo.component';
+import { ViewPokemonsComponent } from './Home/ViewPokemons/view-pokemons.component';
 
-export const routes: Routes = [{ path: '', component: Foo }];
+export const routes: Routes = [{ path: '', component: ViewPokemonsComponent }];

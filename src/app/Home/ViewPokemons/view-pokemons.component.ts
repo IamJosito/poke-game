@@ -7,12 +7,12 @@ import { PokemonStore } from '../../store/pokemon.store';
 
 @Component({
   selector: 'foo',
-  templateUrl: './foo.component.html',
+  templateUrl: './view-pokemons.component.html',
   imports: [Card, Button, Select, FormsModule],
   providers: [PokemonStore],
   standalone: true,
 })
-export class Foo {
+export class ViewPokemonsComponent {
   selectedPokemon: string = '';
   private readonly pokemonStore = inject(PokemonStore);
   pokemons = this.pokemonStore.pokemons;
